@@ -33,7 +33,40 @@ class MyPackageClass {
 }
 ```
 
-### 
+### Defining a Class in Java
+Java provides a reserved keyword class to define a class. The keyword must be followed by the class name. Inside the class, we declare methods and variables.
+In general, class declaration includes the following in the order as it appears:
+    I. **Modifiers**: A class can be public or has default access.
+    II. **class keyword**: The class keyword is used to create a class.
+    III. **Class name**: The name must begin with an initial letter (capitalized by convention).
+    IV. **Superclass** (if any): The name of the class's parent (superclass), if any, preceded by the keyword extends. A class can only extend (subclass) one parent.
+    V. **Interfaces** (if any): A comma-separated list of interfaces implemented by the class, if any, preceded by the keyword implements. A class can implement more than one interface.
+    VI. **Body**: The class body surrounded by braces, { }.
+Syntax Example:
+
+```Java
+<access specifier> class class_name   
+    {  
+    // member variables   
+    // class methods   
+    }
+```
+
+### Java Primitives
+Inspite of the fctual assumption that everything in Java is an Object, the Java Programming Language actually features eight primitive data types.
+These include **int**, **byte**, **short**, **long**, **float**, **double**, **boolean** and **char**. These aren’t considered objects and represent raw values.
+They’re stored directly on the stack.
+
+| Type 	   | Size(bits)  | Minimum 	            | Maximum 	                                    | Example                        |
+| :------: | :---------: | :------------------: | :-------------------------------------------: | :----------------------------: |
+| byte 	   | 8 	         | -2<sup>7</sup> 	    | 2<sup>7</sup> – 1 	                          | byte b = 100;                  |
+| short    | 16 	       | -2<sup>15</sup> 	    | 2<sup>15</sup> – 1 	                          | short s = 30_000;              |
+| int 	   | 32 	       | -2<sup>31</sup> 	    | 2<sup>31</sup> – 1 	                          | int i = 100_000_000;           |
+| long 	   | 64 	       | -2<sup>63</sup> 	    | 2<sup>63</sup> – 1 	                          | long l = 100_000_000_000_000;  |
+| float 	 | 32 	       | -2<sup>-149</sup>   	| (2-2<sup>-23</sup>)*2<sup>127</sup>           | float f = 1.456f;              |
+| double 	 | 64 	       | -2<sup>-1074</sup> 	| (2-2<sup>-52</sup>2-52)*2<sup>1023</sup>      | double f = 1.456789012345678;  |
+| char 	   | 16 	       | 0	                  | 2<sup>16</sup> – 1                            | char c = ‘c’;                  |
+| boolean  | 1 	         | – 	                  |   – 	                                        | boolean b = true;              |
 
 
 
