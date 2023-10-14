@@ -53,7 +53,7 @@ Syntax Example:
 ```
 
 ### Java Primitives
-Inspite of the fctual assumption that everything in Java is an Object, the Java Programming Language actually features eight primitive data types.
+Inspite of the factual assumption that everything in Java is an Object, the Java Programming Language actually features eight primitive data types.
 These include **int**, **byte**, **short**, **long**, **float**, **double**, **boolean** and **char**. These aren’t considered objects and represent raw values.
 They’re stored directly on the stack.
 
