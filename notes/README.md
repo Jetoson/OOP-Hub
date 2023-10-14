@@ -88,8 +88,28 @@ ArrayList<int> myNumbers = new ArrayList<int>(); // Invalid
 ArrayList<Integer> myNumbers = new ArrayList<Integer>(); // Valid
 ```
 ### Java Strings 
-A Java string is a sequence of characters that exists as an object of the class **java.lang**. Java strings are created and manipulated through the string class. Once created, a string is **immutable -- its value cannot be changed.
+A Java string is a sequence of characters that exists as an object of the class **java.lang**. Java strings are created and manipulated through the string class. Once created, a string is **immutable** -- its value cannot be changed.
 A string is sequence of characters. A class is a user-defined template for creating an object. A string class is a user-defined template for creating and manipulating string objects, which are sequences of characters.
 
+Examples:
+```Java
+String greeting = "Hello world!";
+String s1 = new String("Hello world!");
+
+```
+
+##### Types of strings in Java
+Java distinguishes between primitive strings and object strings:
+1. **Primitive strings**: These are string literals or string calls from a nonconstructor context. A constructor is a special method used to initialize objects. Primitives are not objects and have no methods or properties. They are represented at the lowest level of language implementation.
+2. **Object strings**. These are strings created using the new operator. Object strings create two objects, whereas primitives create just one. Object strings create the string literal and the variable to refer to it.
+The two string types are stored in memory differently.
+
+When a string literal is created, the Java virtual machine (JVM) checks the string pool to see if it already exists. The string constant pool is a memory area where strings are stored. If the value exists, the string primitive will occupy the existing value. If the value does not exist, the JVM creates a new string and adds it to the pool.
+
+The string constant pool lives inside the memory heap. When an object string is created, the part between the double quotes goes into the string constant pool. The variable assigned to the string is stored in the stack and matched to the string inside the pool.
+
+The memory heap provides global access to all data stored in the heap for the entire life of the Java application. All object values are stored in the heap, including string literals, which are stored in the string constant pool inside the heap. Primitive variables and references to strings are stored in the stack and are matched to values in the heap. 
+
+![Meory Heap and Stack in Java](https://cdn.ttgtmedia.com/rms/onlineimages/stack_and_heap_memory-f.png)
 
 
