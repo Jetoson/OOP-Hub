@@ -87,7 +87,9 @@ The table below shows the primitive type and the equivalent wrapper class:
 ArrayList<int> myNumbers = new ArrayList<int>(); // Invalid
 ArrayList<Integer> myNumbers = new ArrayList<Integer>(); // Valid
 ```
-
+### Java Strings 
+A Java string is a sequence of characters that exists as an object of the class **java.lang**. Java strings are created and manipulated through the string class. Once created, a string is **immutable -- its value cannot be changed.
+A string is sequence of characters. A class is a user-defined template for creating an object. A string class is a user-defined template for creating and manipulating string objects, which are sequences of characters.
 
 
 
