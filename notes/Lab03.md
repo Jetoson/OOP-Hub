@@ -432,7 +432,7 @@ The difference between a `built-in array` and an `ArrayList` in Java, is that th
 import java.util.ArrayList; // import the ArrayList class
 ArrayList<String> cars = new ArrayList<String>(); // Create an ArrayList object
 ```
-`**ArrayList Methods**`
+` ** ArrayList Methods ** `
 
 | Methods           |	Descriptions
 | :---------------- | :------------------------------------------------
