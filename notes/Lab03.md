@@ -304,6 +304,8 @@ end;
 ```
 This is much cleaner. No internal dogs. And cats and dogs are at the same level. We can even introduce other pets to extend the model. Unless it is a fish, or something that does not walk. In that case we again need to refactor. But that is something for an other time.
 
+![aggregation vs inheritance](https://www.baeldung.com/wp-content/ql-cache/quicklatex.com-9b3faa1d251e39a86f6bc3fa58e88b65_l3.svg)
+
 
 
 
