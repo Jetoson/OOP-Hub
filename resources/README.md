@@ -22,4 +22,8 @@
 3. https://stackoverflow.com/questions/269496/inheritance-vs-aggregation
 4. https://www.baeldung.com/cs/inheritance-aggregation
 5. https://www.geeksforgeeks.org/upcasting-vs-downcasting-in-java/
-6. 
+6. https://www.digitalocean.com/community/tutorials/multiple-inheritance-in-java
+7. https://www.programiz.com/java-programming/arraylist
+8. https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html
+9. https://www.visual-paradigm.com/guide/uml-unified-modeling-language/uml-class-diagram-tutorial/
+10. https://www.visual-paradigm.com/guide/uml-unified-modeling-language/uml-aggregation-vs-composition/
