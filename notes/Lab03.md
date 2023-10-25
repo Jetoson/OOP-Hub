@@ -225,11 +225,84 @@ public class Test
     }
 }
 ```
+### Aggregation and Inheritance
 
+#### Inheritance
+In scenarios where classes have substantial similarities and disparities at the same time, inheritance offers a solution in the context of Object-Oriented Programming.
+It implies an **is a** relationship. A good example would be a **Cat** class inheriting an **Animal** class.
 
+#### Aggregation
 
+In scenarios where one class uses another class as the data type of its attributes, aggregation (a.k.a composition) as a construct is involved.
+It implies a **has a** relationship i.e. represents a **whole-part** relationship between objects. A good example would be a **Car** class having an **Engine** class inside of it.
 
+##### When to use which? an excellent explanation from StackOverflow:
 
+It's not a matter of which is the best, but of when to use what.
+In the 'normal' cases a simple question is enough to find out if we need inheritance or aggregation.
+    - If The new class is more or less as the original class. Use **inheritance**. The new class is now a subclass of the original class.
+    - If the new class must have the original class. Use **aggregation**. The new class has now the original class as a member.
+
+However, there is a big gray area. So we need several other tricks.
+    - If we have used inheritance (or we plan to use it) but we only use part of the interface, or we are forced to override a lot of functionality to keep the correlation logical. Then we have a big nasty smell that indicates that we had to use aggregation.
+    - If we have used aggregation (or we plan to use it) but we find out we need to copy almost all of the functionality. Then we have a smell that points in the direction of inheritance.
+
+To cut it short. We should use aggregation **if part of the interface is not used or has to be changed to avoid an illogical situation**. We only need to use inheritance, **if we need almost all of the functionality without major changes**. And when in doubt, use Aggregation.
+
+An other possibility for, the case that we have a class that needs part of the functionality of the original class, is to **split the original class in a root class and a sub class**. And let the new class inherit from the root class. But you should take care with this, not to create an illogical separation.
+
+Lets add an example. We have a class **Dog** with methods: **Eat**, **Walk**, **Bark**, **Play**.
+```Java
+class Dog
+  Eat;
+  Walk;
+  Bark;
+  Play;
+end;
+```
+We now need a class **Cat**, that needs **Eat**, **Walk**, **Purr**, and **Play**. So first try to extend it from a Dog.
+```Java
+class Cat is Dog
+  Purr; 
+end;
+```
+Looks, alright, but wait. This cat can **Bark** (Cat lovers will kill me for that). And a barking cat violates the principles of the universe. So we need to override the Bark method so that it does nothing.
+```Java
+class Cat is Dog
+  Purr; 
+  Bark = null;
+end;
+```
+
+Ok, this works, but it smells bad. So lets try an aggregation:
+```Java
+class Cat
+  has Dog;
+  Eat = Dog.Eat;
+  Walk = Dog.Walk;
+  Play = Dog.Play;
+  Purr;
+end;
+```
+Ok, this is nice. This cat does not bark anymore, not even silent. But still it has an internal dog that wants out. So lets try solution number three:
+```Java
+class Pet
+  Eat;
+  Walk;
+  Play;
+end;
+```
+```Java
+class Dog is Pet
+  Bark;
+end;
+```
+```Java
+class Cat is Pet
+  Purr;
+end;
+```
+This is much cleaner. No internal dogs. And cats and dogs are at the same level. We can even introduce other pets to extend the model. Unless it is a fish, or something that does not walk. In that case we again need to refactor. But that is something for an other time.
 
 
 
