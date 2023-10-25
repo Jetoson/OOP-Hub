@@ -423,6 +423,27 @@ public class Circle {
 In this example, we're overriding the `equals` method for the `Circle` class. Since the signature of the `equals` method accepts an Object, we need to first check if the provided object is an instance of `Circle` before proceeding with our comparison. If we don't, and blindly cast it, we risk a `ClassCastException`.
 This is a common scenario where using `instanceof` is not only acceptable but also recommended to ensure type safety.
 
+### Java ArrayList
+
+The `ArrayList` class is a resizable array, which can be found in the `java.util package`.
+The difference between a `built-in array` and an `ArrayList` in Java, is that the size of an array cannot be modified (if you want to add or remove elements to/from an array, you have to create a new one). While elements can be added and removed from an ArrayList whenever you want. The syntax is also slightly different:
+
+```Java
+import java.util.ArrayList; // import the ArrayList class
+ArrayList<String> cars = new ArrayList<String>(); // Create an ArrayList object
+```
+`**ArrayList Methods**`
+
+| Methods           |	Descriptions
+| :---------------- | :------------------------------------------------
+| size()            | Returns the length of the arraylist.
+| sort()            | Sort the arraylist elements.
+| clone()           | Creates a new arraylist with the same element, size, and capacity.
+| contains()        | Searches the arraylist for the specified element and returns a boolean result.
+| ensureCapacity()  | Specifies the total element the arraylist can contain.
+| isEmpty()         | Checks if the arraylist is empty.
+| indexOf()         | Searches a specified element in an arraylist and returns the index of the element.
+
 
 
 
