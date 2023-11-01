@@ -31,7 +31,9 @@ A string constant pool is a separate place in the heap memory where the values o
 Let’s understand this with the following example:
 `
 String str1 = "Hello"; `
+
 `String str2 = "Hello";`
+
 `String str3 = "Class"; 
 `
 The following illustration explains the memory allocation for the above declaration: 
