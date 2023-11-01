@@ -22,7 +22,6 @@ N.B. If all attributes of an object admits a single initialization only (i.e use
 
 ```Java
 String s1 = "abc";
- 
 String s2 = s1.toUpperCase();  // s1 does not change; the method returns a reference to a new object which can be accessed using s2 variable
 s1 = s1.toUpperCase();         // s1 is now a reference to a new object
 ```
@@ -31,9 +30,9 @@ A string constant pool is a separate place in the heap memory where the values o
 
 Let’s understand this with the following example:
 `
-String str1 = "Hello";
-String str2 = "Hello";
-String str3 = "Class";
+String str1 = "Hello"; <br>
+String str2 = "Hello"; <br>
+String str3 = "Class"; <br>
 `
 The following illustration explains the memory allocation for the above declaration: 
 ![String-Pool Image](https://media.geeksforgeeks.org/wp-content/uploads/20230620182846/Java-String-Pool-3-768.png)
