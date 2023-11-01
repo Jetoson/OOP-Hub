@@ -27,3 +27,11 @@
 8. https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html
 9. https://www.visual-paradigm.com/guide/uml-unified-modeling-language/uml-class-diagram-tutorial/
 10. https://www.visual-paradigm.com/guide/uml-unified-modeling-language/uml-aggregation-vs-composition/
+
+
+## Lab04
+1. https://www.w3schools.com/java/ref_keyword_final.asp
+2. https://www.geeksforgeeks.org/string-constant-pool-in-java/
+3. https://www.geeksforgeeks.org/difference-between-and-equals-method-in-java/
+4. https://www.geeksforgeeks.org/stringbuilder-class-in-java-with-examples/
+5. 
