@@ -47,3 +47,97 @@ String str2 = new String("Doe");
 `
 The following illustration explains the memory allocation for the above declaration:
 ![Using the new keyword](https://media.geeksforgeeks.org/wp-content/uploads/20230714112418/String-Pool-in-Java-660.png)
+
+
+### == vs equals in java
+
+Both `equals()` method and the `==` operator are used to compare two objects in Java. == is an operator and equals() is method. But == operator compares reference or memory location of objects in a heap, whether they point to the same location or not. Whenever we create an object using the operator new, it will create a new memory location for that object. So we use the == operator to check memory location or address of two objects are the same or not.
+
+In general, both equals() and “==” operators in Java are used to compare objects to check equality, but here are some of the differences between the two: 
+   1. The main difference between the .equals() method and == operator is that one is a `method`, and the other is the `operator`.
+   2. We can use == operators for `reference comparison` (address comparison) and .equals() method for `content comparison`. In simple words, == checks if both objects point to the same memory
+      location  whereas .equals() evaluates to the comparison of values in the objects.
+   3. If a class does not override the equals method, then by default, it uses the `equals(Object o)` method of the closest parent class that has overridden this method.
+
+Example:
+```Java
+// Java program to understand 
+// the concept of == operator
+
+public class Test {
+	public static void main(String[] args)
+	{
+		String s1 = "HELLO";
+		String s2 = "HELLO";
+		String s3 = new String("HELLO");
+
+		System.out.println(s1 == s2); // true
+		System.out.println(s1 == s3); // false
+		System.out.println(s1.equals(s2)); // true
+		System.out.println(s1.equals(s3)); // true
+	}
+}
+
+```
+
+#### StringBuilder
+StringBuilder in Java represents a mutable sequence of characters. Since the String Class in Java creates an immutable sequence of characters, the StringBuilder class provides an alternative to String Class, as it creates a mutable sequence of characters. 
+
+Example:
+```Java
+// Java Code to illustrate StringBuilder
+
+import java.util.*;
+import java.util.concurrent.LinkedBlockingQueue;
+
+public class GFG1 {
+	public static void main(String[] argv) throws Exception
+	{
+		// Create a StringBuilder object
+		// using StringBuilder() constructor
+		StringBuilder str = new StringBuilder();
+
+		str.append("GFG");
+
+		// print string
+		System.out.println("String = " + str.toString());
+
+		// create a StringBuilder object
+		// using StringBuilder(CharSequence) constructor
+		StringBuilder str1
+			= new StringBuilder("AAAABBBCCCC");
+
+		// print string
+		System.out.println("String1 = " + str1.toString());
+
+		// create a StringBuilder object
+		// using StringBuilder(capacity) constructor
+		StringBuilder str2 = new StringBuilder(10);
+
+		// print string
+		System.out.println("String2 capacity = "
+						+ str2.capacity());
+
+		// create a StringBuilder object
+		// using StringBuilder(String) constructor
+		StringBuilder str3
+			= new StringBuilder(str1.toString());
+
+		// print string
+		System.out.println("String3 = " + str3.toString());
+	}
+}
+
+```
+
+Output
+`
+String = GFG
+String1 = AAAABBBCCCC
+String2 capacity = 10
+String3 = AAAABBBCCCC
+`
+
+
+
+
