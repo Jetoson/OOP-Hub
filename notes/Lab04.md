@@ -150,7 +150,7 @@ Output
 ### The Static Keyword
 The `static keyword` is a non-access modifier used for methods and attributes. Static methods/attributes can be accessed **without** creating an object of a class.
 
-Example:
+Examples:
 
 ```Java
 
@@ -177,4 +177,35 @@ public class Main {
 
 ```
 
+```Java
+class ClassWithStatics {
+ 
+    static String className = "Class With Static Members";
+    private static int instanceCount = 0;
+ 
+    public ClassWithStatics() {
+        instanceCount++;
+    }
+ 
+    public static int getInstanceCount() {
+        return instanceCount;
+    }
+}
+ 
+class Test {
+ 
+    public static void main(String[] args) {
+        System.out.println(ClassWithStatics.getInstanceCount());       // 0
+ 
+        ClassWithStatics instance1 = new ClassWithStatics();
+        ClassWithStatics instance2 = new ClassWithStatics();
+        ClassWithStatics instance3 = new ClassWithStatics();
+ 
+        System.out.println(ClassWithStatics.getInstanceCount());       // 3
+    }
+}  
+```
+
+
+### Singleton Pattern
 
