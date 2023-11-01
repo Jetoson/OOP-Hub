@@ -43,10 +43,12 @@ The following illustration explains the memory allocation for the above declarat
 One way to skip this memory allocation is to use the new keyword while creating a new string object. The ‘new’ keyword forces a new instance to always be created regardless of whether the same value was used previously or not. Using ‘new’ forces the instance to be created in the heap outside the string constant pool which is clear, since caching and re-using of instances isn’t allowed here. 
 
 Let’s understand this with an example:
-`
-String str1 = new String("John");
-String str2 = new String("Doe");
-`
+
+>
+> String str1 = new String("John");
+> String str2 = new String("Doe");
+>
+>
 The following illustration explains the memory allocation for the above declaration:
 ![Using the new keyword](https://media.geeksforgeeks.org/wp-content/uploads/20230714112418/String-Pool-in-Java-660.png)
 
@@ -133,12 +135,13 @@ public class GFG1 {
 ```
 
 Output
-`
-String = GFG
-String1 = AAAABBBCCCC
-String2 capacity = 10
-String3 = AAAABBBCCCC
-`
+
+>
+> String = GFG
+> String1 = AAAABBBCCCC
+> String2 capacity = 10
+> String3 = AAAABBBCCCC
+>
 
 
 
