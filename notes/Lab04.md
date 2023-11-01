@@ -46,8 +46,8 @@ Let’s understand this with an example:
 
 >
 > String str1 = new String("John");
-> String str2 = new String("Doe");
 >
+> String str2 = new String("Doe");
 >
 The following illustration explains the memory allocation for the above declaration:
 ![Using the new keyword](https://media.geeksforgeeks.org/wp-content/uploads/20230714112418/String-Pool-in-Java-660.png)
@@ -138,8 +138,11 @@ Output
 
 >
 > String = GFG
+>
 > String1 = AAAABBBCCCC
+>
 > String2 capacity = 10
+>
 > String3 = AAAABBBCCCC
 >
 
