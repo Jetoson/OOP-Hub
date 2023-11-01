@@ -34,4 +34,4 @@
 2. https://www.geeksforgeeks.org/string-constant-pool-in-java/
 3. https://www.geeksforgeeks.org/difference-between-and-equals-method-in-java/
 4. https://www.geeksforgeeks.org/stringbuilder-class-in-java-with-examples/
-5. 
+5. https://www.w3schools.com/java/ref_keyword_static.asp
