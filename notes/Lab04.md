@@ -29,13 +29,14 @@ s1 = s1.toUpperCase();         // s1 is now a reference to a new object
 A string constant pool is a separate place in the heap memory where the values of all the strings which are defined in the program are stored. When we declare a string, an object of type String is created in the stack, while an instance with the value of the string is created in the heap. On standard assignment of a value to a string variable, the variable is allocated stack, while the value is stored in the heap in the string constant pool. It is a small cache that resides within the heap. Java stores all the values inside the string constant pool on direct allocation. This way, if a similar value needs to be accessed again, a new string object created in the stack can reference it directly with the help of a pointer. In other words, the string constant pool exists mainly to reduce memory usage and improve the reuse of existing instances in memory. When a string object is assigned a different value, the new value will be registered in the string constant pool as a separate instance. 
 
 Let’s understand this with the following example:
-`
-String str1 = "Hello"; `
 
-`String str2 = "Hello";`
 
-`String str3 = "Class"; 
-`
+> String str1 = "Hello"; 
+>
+> String str2 = "Hello";
+>
+> String str3 = "Class"; 
+
 The following illustration explains the memory allocation for the above declaration: 
 ![String-Pool Image](https://media.geeksforgeeks.org/wp-content/uploads/20230620182846/Java-String-Pool-3-768.png)
 
