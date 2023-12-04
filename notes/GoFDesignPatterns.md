@@ -22,7 +22,7 @@ Creating an object step by step and a method to finally get the object instance.
 Creating a new object instance from another similar instance and then modify according to our requirements.
 
 
-2. ## Structural:
+## 2. Structural:
 The design patterns in this category deals with the class structure such as Inheritance and Composition.
 2.1. **Adapter**
 Provides an interface between two unrelated entities so that they can work together.
